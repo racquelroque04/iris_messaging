@@ -1,8 +1,14 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
-
 // Variables
 @import 'variables';
-
+@import 'dashboard';
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+@import '~bootstrap-vue/dist/bootstrap-vue.css';
+
+
+.new-class {
+  background-color: red;
+}

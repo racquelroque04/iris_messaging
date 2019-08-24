@@ -12,5 +12,15 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('web.dashboard');
 });
+
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('me', 'User\UserController@index');
+});
+
+Auth::routes();
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
