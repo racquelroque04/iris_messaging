@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Clients\Rainbow;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
@@ -40,6 +41,16 @@ class LoginController extends Controller
         }
 
         if ($this->attemptLogin($request)) {
+            $rainbowClient = new Rainbow();
+
+            $user = $this->guard()->user();
+
+            $hasRainbowAccount = $rainbowClient->hasRainbowAccount($user);
+
+            if (!$hasRainbowAccount) {
+                $rainbowClient->createAccount($user->id);
+            }
+
             return $this->sendLoginResponse($request);
         }
 

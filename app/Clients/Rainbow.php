@@ -1,7 +1,9 @@
 <?php
 
-namespace Clients;
+namespace App\Clients;
 
+use App\RainbowAccount;
+use App\User;
 use Mockery\Exception;
 use GuzzleHttp\Client;
 
@@ -88,16 +90,13 @@ class  Rainbow
         $user = User::find($userId);
 
         $data = [
-            'user_id' => $userId,
-            'password' => $this->getToken(10),
+            'user_id'       => $userId,
+            'password'      => $this->getToken(10),
+            'contact_id'    => 'pending'
         ];
-        if (env('APP_ENV') == 'staging') {
-            $data['email'] = 'mpd_customer_staging_'. $user->id . '@mypocketdoctor.com';
-        } else {
-            $data['email'] = 'mpd_customer_'. $user->id . '@mypocketdoctor.com';
-        }
+        $data['email'] = 'im_'. $user->id . '@irismessaging.com';
 
-        RainbowAccount::create($data);
+        $rainbowAccount = RainbowAccount::create($data);
 
         try {
             $rainbow = $this->client->post( $this->url.'/api/rainbow/admin/v1.0/users', [
@@ -115,8 +114,7 @@ class  Rainbow
         } catch (Exception $exception) {
             return false;
         }
-        $user->has_rainbow_account = 1;
-        $user->rainbowAccount->update([
+        $rainbowAccount->update([
             'contact_id' => json_decode($rainbow)->data->id
         ]);
 
