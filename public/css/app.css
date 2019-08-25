@@ -1889,6 +1889,73 @@ input[type="color"].form-control:disabled {
   background-color: #343a40;
 }@charset "UTF-8";
 
+.bg-image {
+  background-image: url("https://sverigeskvinnolobby.se/wp-content/uploads/2015/11/pexels-photo-399161.jpg");
+  background-size: cover;
+  height: auto;
+  min-height: 100% !important;
+}
+
+.fuchsia {
+  background-color: #D93E42 !important;
+}
+
+.dark-violet {
+  background-color: #2E2334 !important;
+}
+
+.white {
+  color: white;
+}
+
+.upper-dashboard {
+  padding-top: 40px !important;
+  padding-bottom: 24px !important;
+}
+
+.box-shadow {
+  box-shadow: 0 0 20px;
+}
+
+.border-radius {
+  border-radius: 3px;
+}
+
+.home-overlay {
+  background-color: white;
+  height: 85vh;
+  position: absolute;
+  width: 100%;
+  top: 96px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 2;
+  cursor: pointer;
+  border-radius: 3px;
+  box-shadow: 0 0 20px;
+}
+
+.h-35vh {
+  height: 35vh !important;
+  background-color: #2E2334 !important;
+}
+
+.h-49vh {
+  height: 49.5vh !important;
+  background-color: #D93E42 !important;
+}
+
+.border-right-light {
+  border-right: 1px solid #d4cdcd;
+  height: -webkit-fill-available;
+}
+
+.no-padding {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
 .pd-11 {
   padding: 11px !important;
 }
@@ -1901,15 +1968,13 @@ input[type="color"].form-control:disabled {
   padding-left: 0px !important;
 }
 
-.jumbotron-bg {
-  background-color: #ffd1dc !important;
+.pdt-30 {
+  padding-top: 30px !important;
 }
 
-.bg-image {
-  background-image: url("https://sverigeskvinnolobby.se/wp-content/uploads/2015/11/pexels-photo-399161.jpg");
-  background-size: cover;
-  height: auto;
-  min-height: 100% !important;
+.pdbt-51 {
+  padding-bottom: 51px;
+  padding-top: 51px;
 }
 
 /*!

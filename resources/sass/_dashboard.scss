@@ -1,0 +1,31 @@
+.bg-image {
+  background-image: url("https://sverigeskvinnolobby.se/wp-content/uploads/2015/11/pexels-photo-399161.jpg");
+  background-size: cover;
+  height: auto;
+  min-height: 100% !important;
+}
+
+.fuchsia {
+  background-color: $fuchsiaPink !important;
+}
+
+.dark-violet {
+  background-color: $darkViolet !important;
+}
+
+.white {
+  color: white;
+}
+
+.upper-dashboard {
+  padding-top: 40px!important;
+  padding-bottom: 24px!important;
+}
+
+.box-shadow {
+  box-shadow: 0 0 20px;
+}
+
+.border-radius {
+  border-radius: 3px;
+}

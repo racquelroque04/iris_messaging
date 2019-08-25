@@ -36,4 +36,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function rainbowAccount()
+    {
+        return $this->hasOne('App\RainbowAccount', 'user_id');  
+    }
 }

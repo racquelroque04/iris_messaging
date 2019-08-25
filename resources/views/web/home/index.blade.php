@@ -1,5 +1,8 @@
 @extends('web.master')
 
 @section('content')
-  <my-button></my-button>
+  <div class="container home-overlay">
+    <rainbow-users></rainbow-users>
+  </div>
+  <index-background></index-background>
 @stop

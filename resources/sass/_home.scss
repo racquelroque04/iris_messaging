@@ -1,0 +1,29 @@
+.home-overlay {
+  background-color: white;
+  height: 85vh;
+  position: absolute;
+  width: 100%;
+  top: 96px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 2;
+  cursor: pointer;
+  border-radius: 3px;
+  box-shadow: 0 0 20px;
+}
+
+.h-35vh {
+  height: 35vh !important;
+  background-color: $darkViolet !important;
+}
+
+.h-49vh {
+  height: 49.5vh !important;
+  background-color: $fuchsiaPink !important;
+}
+
+.border-right-light {
+  border-right: 1px solid #d4cdcd;
+  height: -webkit-fill-available;
+}
